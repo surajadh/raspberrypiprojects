@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 @app.route("/on/<light>")
 def turnon(light):
-        if !light
+        if not light or light.isspace()
                 return make_response('No Light specified')
         if light == 'yellow':
                 GPIO.output(YELLOW, 1)
@@ -31,7 +31,7 @@ def turnon(light):
 
 @app.route("/off/<light>")
 def turnoff(light):
-        if !light
+        if not light or light.isspace()
                 return make_response('No Light specified')
         if light == 'yellow':
                 GPIO.output(YELLOW, 0)
